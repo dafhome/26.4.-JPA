@@ -1,0 +1,19 @@
+3- Redactar un texto que resuelva las siguientes preguntas:
+- Qué es crear una aplicación por capas?
+- Qué es un ORM?
+- Para qué sirve la dependencia Lombok?
+- Para qué sirve la capa de controlador?
+- Qué diferencia hay entre ddl-auto=create-drop y ddl-auto=update? (propiedades)
+- En qué orden deben crearse las clases para crear la API con JPA?
+
+Este método para la comunicación con la base de datos consiste en crear una aplicación por capas. En estas secciones tendremos presentación, lógica de negocio y acceso a datos, lo que hará este método escalable.
+
+Para esto, utilizaremos el ORM Hibernate que nos permitirá interactuar con la base de datos utilizando objetos en lugar de SQL. Hibernate es una implementación de JPA que maneja la persistencia de datos.
+
+Utilizamos también la dependencia Lombok, que genera automáticamente el código para getters, setters, constructores, etc. Simplemente utilizaremos anotaciones para poder hacer uso de ellos.
+
+Por otro lado, la capa de controlador permite manejar solicitudes HTTP, delegando la lógica de negocio a los servicios y devolviendo las respuestas configuradas.
+
+Además, cuando se ejecuta nuestra aplicación, podemos definir qué método queremos sobre la creación y limpieza de datos en las tablas. Podemos configurarlo inicialmente con ddl-auto=create-drop, que nos permitirá hacer las primeras pruebas borrando los datos y tablas cada vez que se detenga la aplicación. Una vez tengamos más avanzado el desarrollo, deberemos cambiar esta configuración en las propiedades a update para que no borre los datos cada vez.
+
+Por último, es muy importante el orden de la creación de las capas. El orden correcto será Entidades, Repositorios, Servicios y, por último, Controladores.

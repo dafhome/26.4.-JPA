@@ -1,0 +1,4 @@
+Entidades (Modelos de datos)
+Repositorios (Interfaz para operaciones de base de datos)
+Servicios (Lógica de negocio)
+Controladores (Manejo de solicitudes HTTP)
